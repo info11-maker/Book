@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books</title>
+</head>
+<body>
+<h1> Test </h1>
+<p>Cititor : {{userAccess.name}}</p>
+<p><strong>{{book.text}}</strong></p>
+<form method="post" action="/book/submit-book-answer?userAccessId={{userAccess.id}}">
+<input type="hidden" name="id" value="{{id}}">
+<ol> {{#book.choices}}
+    <li><input type="radio" name="choice" value="{{id}}">{{text}}</li>
+{{/book.choices}}
+</ol>
+<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
